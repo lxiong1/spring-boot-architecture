@@ -1,0 +1,11 @@
+\subsection*{Dependency Auto-configuration}
+
+\textbf{Overview:} How Spring Boot deciphers what to auto-configure based on dependencies in the classpath.\\
+
+\textbf{System state:} All desired dependencies from the starter modules are declared appropriately in the chosen dependency management tool. The \texttt{Main} application class has been annotated with \texttt{@SpringBootApplication}. \\
+
+\textbf{System environment:} Local machine is running as normally and integrated development environment is fully functional. \\
+
+\textbf{External stimulus:} The \texttt{SpringApplication.run()} method is invoked. \\
+
+\textbf{Required system response:} The Spring Boot application will iterate over the collection of \texttt{spring.factories} auto-configuration classes, in which it will scan dependencies declared in the classpath to find all matches. Once the dependencies have been discovered for matches, they will be auto-configured accordingly.

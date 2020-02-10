@@ -1,0 +1,7 @@
+\subsection*{Availability and Resilience}
+
+\ranking Low
+
+Ultimately, it is the other applications that implement Spring Boot that must be available and resilient, although the framework supports availability and resilience in many ways, it is those applications.
+
+Spring Boot applications are usually used behind a load balancer and deployed on multiple servers, depending on the infrastructure of the system implementing the framework. Spring Boot facilitates the communication between clients and servers, and therefore must be mostly available with limited outages. In the case of those outages, a load balancer can be used to direct the traffic from clients to different servers. Spring Boot can leverage the Spring Cloud to manage client-side load balancing in addition to Spring Actuators that monitor the health of the system. Monitoring of the system's health is key to ensuring that web request traffic does not overload the server, and therefore any changes in the architecture need to evaluated carefully to preserve the integrity of the system.

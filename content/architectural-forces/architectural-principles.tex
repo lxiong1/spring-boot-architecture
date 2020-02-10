@@ -1,0 +1,47 @@
+\section{Architectural Principles}
+
+\noindent\makebox[\linewidth]{\rule{\textwidth}{3pt}}\ \\
+
+\textbf{Principle}: The Spring Boot framework when used within a consuming project must greatly minimize the effort of writing configurations for developing a Spring-based web application.\\
+
+\textbf{Rationale}: If Spring Boot does not reduce the effort for Java developers to write boilerplate configuration code, it will not have a convincing reason to be adopted over Spring Framework or other web application frameworks.\\
+
+\textbf{Implications}: 
+\begin{itemize}
+\item Spring Boot must use Spring Framework as its' foundation.
+\item Spring Boot must be written in Java or other JVM-based programming languages.
+\item Spring Boot must abstract away all configuration code into a simple interface from the perspective of a Java developer.
+\item A consuming project must be able to use short, expressive, and single-lined annotation abstractions to auto-configure all class path dependencies.
+\item A consuming project must have a way to pre-define objects to be configured by code that is understood by Spring Boot.
+\item Spring Boot features and documentation must be up to date with software technology trends to stay relevant to Java developers.
+\end{itemize}
+
+\noindent\makebox[\linewidth]{\rule{\textwidth}{3pt}}\ \\
+
+\textbf{Principle}: The Spring Boot framework when used within a consuming project must be able to delivery value to the wide-ranged use cases of Java developers within the context of web application development.\\
+
+\textbf{Rationale}: Java Developers all have unique situations, circumstances, and environments of which they work in. There is no one-size-fits-all type of framework so Spring Boot has to justify their flexibility and adaptability to tend to the needs of Java developers.\\
+
+\textbf{Implications}: 
+\begin{itemize}
+\item Spring Boot must be able to integrate with a wide range of external libraries concerning web application development.
+\item Spring Boot must be able to acknowledge and address the concerns of integration with other libraries.
+\item Spring Boot must package commonly used and cohesive libraries together to address a particular need.
+\item Spring Boot must be easily accessible to Java developers through a repository.
+\end{itemize}
+
+\noindent\makebox[\linewidth]{\rule{\textwidth}{3pt}}\ \\
+
+\textbf{Principle}: The Spring Boot framework must be developed by reusing many functionalities of the Spring Framework.\\
+
+\textbf{Rationale}: Code reuse is a large part of developing software to reduce redundancy and shorten development time.\\
+
+\textbf{Implications}: 
+\begin{itemize}
+\item Spring Boot must adhere to some the design constraints of Spring Framework.
+\item Spring Boot must work in harmony with Spring Framework and not against it.
+\item Spring Boot must be able to market itself apart from Spring Framework.
+\item Spring Boot must offer something to Java developers that Spring Framework already does not.
+\end{itemize}
+
+\noindent\makebox[\linewidth]{\rule{\textwidth}{3pt}}

@@ -1,0 +1,3 @@
+\def \vhCurrentVersion {1.0}
+\def \vhCurrentDate {November 5, 2019}
+\newsetsimple \vhAllAuthorsSet {Ankit Kumar \& Lue Xiong}

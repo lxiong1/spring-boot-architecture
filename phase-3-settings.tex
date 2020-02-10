@@ -1,0 +1,59 @@
+\documentclass[openany]{scrreprt}
+\usepackage[utf8]{inputenc}
+
+% quotes
+\usepackage{csquotes}
+\usepackage{tcolorbox}
+\usepackage{listings}
+%\usepackage{underscore}
+\usepackage[hyphens,spaces,obeyspaces]{url}
+\usepackage[bookmarks=true]{hyperref}
+\usepackage[english]{babel}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{float}
+\usepackage{mdframed}
+\usepackage[htt]{hyphenat}
+
+\newmdenv[
+  topline=true,
+  bottomline=true,
+  skipabove=\topsep,
+  skipbelow=\topsep
+]{siderules}
+
+\newtcolorbox{textbox}[1][]{
+	standard jigsaw,
+	opacityback=0
+}
+
+\lstset{
+  basicstyle=\ttfamily,
+  columns=fullflexible,
+  frame=single,
+  breaklines=true,
+  postbreak=\mbox{\textcolor{red}{$\hookrightarrow$}\space},
+}
+
+\hypersetup{
+pdftitle={Spring Boot},			% title
+pdfauthor={Group Four},			% author
+pdfsubject={SENG 5861},			% subject of the document
+pdfkeywords={Phase Two},		% list of keywords
+colorlinks=true,				% false: boxed links; true: colored links
+linkcolor=blue,					% color of internal links
+citecolor=black,				% color of links to bibliography
+filecolor=black,				% color of file links
+urlcolor=blue,					% color of external links
+linktoc=page					% only page is linked
+}
+
+% print setup
+\usepackage[letterpaper]{geometry}
+
+\renewcommand{\bibname}{References}
+
+\title{Spring Boot}
+\author{Ahmed Algosaibi, Ankit Kumar, \\Laura Gabrielson, Lue Xiong}
+\date{November 22, 2019}

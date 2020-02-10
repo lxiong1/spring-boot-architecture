@@ -1,0 +1,58 @@
+\input{phase-3-settings}
+
+\begin{document}
+
+\newcommand{\hh}[1]{\noindent\textbf{\textit{#1}}}
+
+\newcommand{\ranking}{\textbf{\textit{Ranking: }}}
+
+\nocite{*}
+
+\maketitle
+
+\chapter{Revision History}
+\input{content/revision-history/history.tex}
+
+\tableofcontents
+
+\let\SavedIndent\indent
+\protected\def\indent{%
+  \begingroup
+    \parindent=\the\parindent
+    \SavedIndent
+  \endgroup
+}
+\setlength{\parindent}{0pt}
+
+\chapter{Introduction}
+\input{content/introduction/purpose-and-scope.tex}
+\input{content/introduction/audience.tex}
+\input{content/introduction/status.tex}
+\input{content/introduction/architectural-design-approach.tex}
+
+\chapter{Glossary}
+\input{content/glossary/glossary.tex}
+
+\chapter{Stakeholders and Requirements}
+\input{content/01-stakeholders/stakeholders.tex}
+\input{content/02-requirements/overview-of-requirements.tex}
+\input{content/scenarios/system-scenarios.tex}
+
+\chapter{Architectural Forces}
+\input{content/architectural-forces/goals.tex}
+\input{content/architectural-forces/constraints.tex}
+\input{content/architectural-forces/architectural-principles.tex}
+
+\chapter{Architectural Views Top Level}
+\input{content/architectural-views-top-level/perspectives.tex}
+\input{content/architectural-views-top-level/context-view.tex}
+\input{content/architectural-views-top-level/functional-view.tex}
+\input{content/architectural-views-top-level/information-view.tex}
+\input{content/architectural-views-top-level/deployment-view.tex}
+
+\chapter{Appendices}
+\input{content/appendices/proposed-changes-extensions.tex}
+\bibliographystyle{content/appendices/ieee-annot}
+\bibliography{content/appendices/phase-3}
+
+\end{document}

@@ -1,0 +1,5 @@
+\subsection*{Concurrency}
+
+\ranking High
+
+The Spring Boot framework can handle concurrency in two ways. If the application using Spring Boot also has a database, the framework provides support for an \enquote{optimistic and pessimistic locking mechanism} \cite{springBootDataBaseConcurrency} to maintain the integrity of the data as it is simultaneously read and updated. The framework also supports asynchronous method calls, which is very useful for scaling the services by releasing the \enquote{thread back to the thread-pool when waiting for a response} \cite{springBootConcurrency}.

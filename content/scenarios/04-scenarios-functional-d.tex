@@ -1,0 +1,11 @@
+\subsection*{Custom Failure Analyzer}
+
+\textbf{Overview:} How Spring Boot allows implementation of custom failure analyzers on failed application start-up.\\
+
+\textbf{System state:} The \texttt{Main} application class has been annotated with \texttt{@SpringBootApplication}. A custom implementation of the \texttt{FailureAnalyzer} interface has been created and the \texttt{analyze()} method has been overridden. The Spring Boot application is unable to start. \\
+
+\textbf{System environment:} Local machine is running as normally and integrated development environment is fully functional. \\
+
+\textbf{External stimulus:} The \texttt{SpringApplication.run()} method is invoked. \\
+
+\textbf{Required system response:} The Spring Boot application on start-up failure will run the \texttt{analyze()} method which will be called automatically by Spring Boot. The method will return new \texttt{FailureAnalysis} objects that requires arguments of \texttt{custom failure message}, and \texttt{Throwable} based on the custom \texttt{FailureAnalyzer} implementation. Those objects are surfaced to the console to display to the user as an explanation as to why the start-up of the application failed.

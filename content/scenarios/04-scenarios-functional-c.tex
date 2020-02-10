@@ -1,0 +1,13 @@
+\subsection*{Spring Boot Conditional Annotation}
+
+\textbf{Overview:} How Spring Boot allows custom conditionals to apply configurations.\\
+
+\textbf{System state:} The \texttt{Main} application class has been annotated with \texttt{@SpringBootApplication}. A custom configuration class has been created and annotated with the \texttt{@Configuration} from \texttt{org.springframework.context.annotation} and \texttt{@ConditionalOnClass} from \texttt{org.springframework.boot.autoconfigure.condition} containing a specified classname as an argument. \\
+
+\textit{Note: There are other available conditional annotation classes}\\
+
+\textbf{System environment:} Local machine is running as normally and integrated development environment is fully functional. \\
+
+\textbf{External stimulus:} The \texttt{SpringApplication.run()} method is invoked. \\
+
+\textbf{Required system response:} The Spring Boot application will use the spring framework to scan custom configuration classes and then check whether the \texttt{@ConditionalOnClass} is met. This is done by calling the \texttt{OnClassCondition} class, which in itself uses the \texttt{getMatchOutcome} function that resolves to returning a \texttt{ConditonOutcome} object containing a boolean and message. If the condition is met, then the logic within the custom configuration class will be used.

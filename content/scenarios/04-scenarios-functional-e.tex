@@ -1,0 +1,11 @@
+\subsection*{Conditional Evaluation Reporting at Runtime}
+
+\textbf{Overview:} How Spring Boot creates a \texttt{conditional evaluation report} when application fails at the start-up due to a conditional non-match of a declared bean.\\
+
+\textbf{System state:} The \texttt{Main} application class has been annotated with \texttt{@SpringBootApplication}. The Spring Boot application is not able to start up. There is a custom bean declared with \texttt{@ConditionalOnProperty} and there is no property that exists to match the condition. The log level is set to DEBUG. \\
+
+\textbf{System environment:} Local machine is running as normally and integrated development environment is fully functional. \\
+
+\textbf{External stimulus:} The \texttt{SpringApplication.run()} method is invoked. \\
+
+\textbf{Required system response:} The Spring Boot application uses the \texttt{ConditionEvaluationReportLoggingListener} class under the package\\ \texttt{org.springframework.boot.autoconfigure.logging}, which contains a method called \texttt{onApplicationEvent} that eventually calls a method called \texttt{logAutoConfigurationReport}. This method will resolve to evaluating whether or not the log level is set to DEBUG and if it is, then there will be an output displayed in the console based on the \texttt{ConditionEvaluationReportMessage} class' resolution. 

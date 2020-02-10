@@ -1,0 +1,11 @@
+\subsection*{Performance}
+
+\textbf{Overview:} Check the Spring Boot application start-up time responsiveness.\\
+
+\textbf{System and environment state:} The Spring Boot application has all dependencies defined as well as one HTTP endpoint. The application is able to start up with no errors.\\
+
+\textbf{External stimulus:} Developer runs the Spring Boot application.\\
+
+\textbf{System response:} Spring Boot's latest release uses global lazy initialization to reduce the time to start-up an application by creating bean objects only when it is needed.\\
+
+\textbf{Response measure:} In 95\% of Spring Boot application start-up will start up in less than one second. In 99.9\% of application start-up, it will start up within one second.

@@ -1,0 +1,11 @@
+\subsection*{Security}
+
+\textbf{Overview:} Check how the Spring Boot application handles invalid user credentials.\\
+
+\textbf{System and environment state:} The \texttt{spring-boot-starter-security} has been defined as a dependency, and Spring's content negotiation strategy is implementing HTTP Basic authentication \cite{springBootSecurity}. The system is using the default \texttt{SecurityAutoConfiguration} class. The system is operating under its definition of normal load, has deployed without error, and is communicating over a good internet connection.\\
+
+\textbf{External stimulus:} A user sends a \texttt{GET} request with an invalid username and password in its header.\\
+
+\textbf{System response:} The system returns a \texttt{401 Unauthorized} response to the \texttt{GET} request.\\
+
+\textbf{Response measure:} Invalid credentials always trigger a \texttt{401 Unauthorized} response.

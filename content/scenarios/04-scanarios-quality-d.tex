@@ -1,0 +1,11 @@
+\subsection*{Supportability}
+
+\textbf{Overview:} How Spring Boot help identify issues in start-up of consuming project. \\
+
+\textbf{System and environment state:} The integrated development environment is fully functional and the Spring Boot application is not able to start-up because it could not satisfy the condition to instantiate a bean that is being used in application. \\
+
+\textbf{External stimulus:} Developer runs the Spring Boot application. \\
+
+\textbf{System response:} Spring Boot uses default logging of logback for the errors that might come during the start-up. In this case, the Spring Boot will find the error and report back to the consuming project. \\
+
+\textbf{Response measure:} In 95\% of Spring Boot application start-up will report the error in less than one second. In 99.9\% of application start-up, it will report within one second.

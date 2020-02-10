@@ -1,0 +1,11 @@
+\subsection*{Spring Boot Application Context Creation}
+
+\textbf{Overview:} How Spring Boot creates the application context.\\
+
+\textbf{System state:} No web application type specified and application is using the \texttt{spring-boot-starter-web} module \\
+
+\textbf{System environment:} Local machine is running as normally and integrated development environment is fully functional. \\
+
+\textbf{External stimulus:} The \texttt{SpringApplication.run()} method is invoked. \\
+
+\textbf{Required system response:} The Spring Boot application by default -- if the web application type \texttt{SERVLET} or \texttt{REACTIVE} are not specified as a context -- will create a new \texttt{ApplicationContext} instance off of the\\ \texttt{org.springframework.web.context.support.AnnotationConfigApplicationContext}\\ class and return it. The allows the user to be given an \texttt{ApplicationContext} without having to manually define a configuration.
